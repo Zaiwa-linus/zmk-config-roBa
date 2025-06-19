@@ -1,5 +1,20 @@
 #include "roBa.dtsi"
 
+#include <input/processors.dtsi>
+#include <dt-bindings/zmk/input_transform.h>
+/ {
+    trackball_listener {
+        compatible = "zmk,input-listener";
+        device = <&trackball>;
+
+        scroller {
+            layers = <５>;
+            input-processors =
+                <&zip_xy_to_scroll_mapper>;
+        };
+    };
+};
+
 &default_transform {
     col-offset = <6>;
 };
