@@ -14,27 +14,27 @@
 
         tab {
             bindings = <&kp TAB>;
-            key-positions = <11 12>;
-        };
-
-        shift_tab {
-            bindings = <&kp LS(TAB)>;
-            key-positions = <12 13>;
-        };
-
-        muhennkann {
-            bindings = <&to_layer_0 INT_MUHENKAN>;
-            key-positions = <11 10>;
+            key-positions = <0 1>;
         };
 
         double_quotation {
             bindings = <&kp DOUBLE_QUOTES>;
-            key-positions = <20 21>;
+            key-positions = <20 21 38>;
         };
 
-        eq {
-            bindings = <&kp EQUAL>;
-            key-positions = <24 25>;
+        underbar_ {
+            bindings = <&kp MINUS>;
+            key-positions = <8 9 38>;
+        };
+
+        minus {
+            bindings = <&kp MINUS>;
+            key-positions = <8 9>;
+        };
+
+        quoto {
+            bindings = <&kp SQT>;
+            key-positions = <20 21>;
         };
     };
 
@@ -64,9 +64,9 @@
         default_layer {
             bindings = <
 &kp Q             &kp W         &kp E         &kp R      &kp T                                        &kp Y        &kp U  &kp I      &kp O    &kp P
-&kp A             &kp S         &kp D         &kp F      &kp G        &kp ESCAPE       &kp MINUS      &kp H        &kp J  &lt 5 K    &kp L    &kp SEMICOLON
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V      &kp B        &kp TAB          &kp LS(LG(S))  &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LEFT_SHIFT    &kp LEFT_WIN  &kp LEFT_ALT  &kp LCTRL  &lt 1 LANG2  &lt 3 SPACE      &kp ENTER      &lt 2 LANG1                             &kp RIGHT_SHIFT
+&kp A             &kp S         &kp D         &kp F      &kp G        &kp ESCAPE       &kp TAB        &kp H        &kp J  &lt 5 K    &kp L    &kp SEMICOLON
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V      &kp B        &kp ESCAPE       &kp LS(LG(S))  &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&kp LEFT_SHIFT    &kp LEFT_ALT  &kp LEFT_WIN  &kp LCTRL  &lt 1 LANG2  &lt 3 SPACE      &kp ENTER      &lt 2 LANG1                             &kp RIGHT_SHIFT
             >;
 
             sensor-bindings = <&inc_dec_kp UP_ARROW DOWN_ARROW>;
@@ -74,10 +74,10 @@
 
         FUNCTION {
             bindings = <
-&kp EXCLAMATION  &kp AT_SIGN  &kp HASH  &kp DOLLAR  &kp PERCENT                                     &kp CARET  &kp AMPERSAND         &kp ASTERISK          &kp LEFT_PARENTHESIS   &kp MINUS
-&trans           &trans       &trans    &trans      &trans       &trans      &kp LEFT_PARENTHESIS   &kp PLUS   &kp F7                &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SQT
-&trans           &trans       &trans    &trans      &trans       &trans      &kp RIGHT_PARENTHESIS  &kp PIPE   &kp NON_US_BACKSLASH  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp F11
-&trans           &trans       &trans    &trans      &trans       &trans      &kp BACKSPACE          &trans                                                                        &kp F12
+&kp EXCLAMATION  &kp AT_SIGN  &kp HASH  &kp DOLLAR  &kp PERCENT                             &kp CARET      &kp AMPERSAND  &kp ASTERISK          &kp UNDERSCORE         &kp MINUS
+&trans           &trans       &trans    &trans      &trans       &trans      &kp GRAVE      &kp PLUS       &kp EQUAL      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SQT
+&trans           &trans       &trans    &trans      &trans       &trans      &kp TILDE      &kp BACKSLASH  &kp PIPE       &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp DOUBLE_QUOTES
+&trans           &trans       &trans    &trans      &trans       &trans      &kp BACKSPACE  &trans                                                                     &kp F12
             >;
         };
 
@@ -92,10 +92,10 @@
 
         ARROW {
             bindings = <
-&kp ESCAPE      &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans                       &trans  &trans  &trans  &trans  &trans
-&kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans   &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans          &trans                  &trans          &trans                   &trans   &trans      &trans  &trans                          &trans
+&kp ESCAPE      &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans                       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans  &trans
+&kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &trans      &trans  &trans        &trans        &trans        &trans  &trans
+&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans   &trans      &trans  &trans        &trans        &trans        &trans  &trans
+&trans          &trans                  &trans          &trans                   &trans   &trans      &trans  &trans                                            &bt BT_CLR_ALL
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
@@ -103,10 +103,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                &trans
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans  &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &trans  &mkp MB2  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans  &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                              &trans
             >;
         };
 
