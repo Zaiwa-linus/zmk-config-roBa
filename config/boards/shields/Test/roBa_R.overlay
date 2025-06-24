@@ -8,7 +8,7 @@
         device = <&trackball>;
 
         scroller {
-            layers = <5>;
+            layers = <6>;
             input-processors =
                 <&zip_y_scaler 1 16>,
                 <&zip_x_scaler 0 1>,
@@ -68,7 +68,7 @@
         reg = <0>;
         spi-max-frequency = <2000000>;
         irq-gpios = <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-        automouse-layer = <4>;
+        automouse-layer = <5>;
     };
 };
 
