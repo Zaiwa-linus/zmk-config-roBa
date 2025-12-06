@@ -1,0 +1,5 @@
+description: BT Profile with Layer Behavior
+
+compatible: "zmk,behavior-bt-layer"
+
+include: one_param.yaml
