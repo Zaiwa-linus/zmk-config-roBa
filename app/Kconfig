@@ -2,8 +2,9 @@
 
 config ZMK_BEHAVIOR_BT_LAYER
     bool "BT Profile Layer Behavior"
-    default y
+    default n
     depends on ZMK_BLE
+    depends on !ZMK_SPLIT || ZMK_SPLIT_ROLE_CENTRAL
     help
       A behavior that combines BT profile selection with automatic layer switching.
       - Profile 1: Layer 1 ON, Layer 2 OFF
