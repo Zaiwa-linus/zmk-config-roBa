@@ -12,8 +12,8 @@
 };
 
 &trackball {
-    automouse-layer = <4>;
-    scroll-layers = <5>;
+    automouse-layer = <3>;
+    scroll-layers = <8>;
 
     // arrows {
     //     layers = <3>;
@@ -126,7 +126,7 @@
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+&trans  &trans  &kp LCTRL  &kp LEFT_COMMAND  &trans  &trans      &trans  &lt 7 LANG1                            &trans
             >;
         };
 
