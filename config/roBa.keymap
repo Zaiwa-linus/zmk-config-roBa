@@ -37,24 +37,14 @@
             key-positions = <11 12>;
         };
 
-        shift_tab {
-            bindings = <&kp LS(TAB)>;
-            key-positions = <12 13>;
+        click {
+            bindings = <&mkp MB1>;
+            key-positions = <18 19>;
         };
 
-        muhennkann {
-            bindings = <&to_layer_0 INT_MUHENKAN>;
-            key-positions = <11 10>;
-        };
-
-        double_quotation {
-            bindings = <&kp DOUBLE_QUOTES>;
-            key-positions = <20 21>;
-        };
-
-        eq {
-            bindings = <&kp EQUAL>;
-            key-positions = <24 25>;
+        rclick {
+            bindings = <&mkp MB2>;
+            key-positions = <19 20>;
         };
     };
 
@@ -150,10 +140,10 @@
 
         num_utl_win {
             bindings = <
-&kp N1  &kp N2  &kp N3  &kp N4  &kp N5                      &kp N6    &kp N7    &kp N8  &kp N9     &kp N0
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans    &trans    &trans  &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                 &trans
+&kp N1  &kp N2         &kp N3  &kp N4        &kp N5                          &kp N6    &kp N7    &kp N8  &kp N9     &kp N0
+&trans  &trans         &trans  &trans        &trans    &trans        &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans
+&trans  &kp LC(MINUS)  &trans  &kp LC(PLUS)  &trans    &trans        &trans  &trans    &trans    &trans  &trans     &trans
+&trans  &trans         &trans  &trans        &mkp MB4  &mkp MB5      &trans  &trans                                 &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -161,10 +151,10 @@
 
         num_utl_mac {
             bindings = <
-&kp N1  &kp N2        &kp N3      &kp N4         &kp N5                      &kp N6    &kp N7    &kp N8  &kp N9     &kp N0
-&trans  &kp LC(LEFT)  &kp LC(UP)  &kp LC(RIGHT)  &trans  &trans      &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans
-&trans  &trans        &trans      &trans         &trans  &trans      &trans  &trans    &trans    &trans  &trans     &trans
-&trans  &trans        &trans      &trans         &trans  &trans      &trans  &trans                                 &trans
+&kp N1  &kp N2         &kp N3      &kp N4         &kp N5                          &kp N6    &kp N7    &kp N8  &kp N9     &kp N0
+&trans  &kp LC(LEFT)   &kp LC(UP)  &kp LC(RIGHT)  &trans    &trans        &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans
+&trans  &kp LG(MINUS)  &trans      &kp LG(PLUS)   &trans    &trans        &trans  &trans    &trans    &trans  &trans     &trans
+&trans  &trans         &trans      &trans         &mkp MB4  &mkp MB5      &trans  &trans                                 &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -172,10 +162,10 @@
 
         num_utl_ios {
             bindings = <
-&kp N1  &kp N2  &kp N3  &kp N4  &kp N5                      &kp N6    &kp N7    &kp N8  &kp N9     &kp N0
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans    &trans    &trans  &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                 &trans
+&kp N1  &kp N2  &kp N3  &kp N4  &kp N5                          &kp N6    &kp N7    &kp N8  &kp N9     &kp N0
+&trans  &trans  &trans  &trans  &trans    &trans        &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans
+&trans  &trans  &trans  &trans  &trans    &trans        &trans  &trans    &trans    &trans  &trans     &trans
+&trans  &trans  &trans  &trans  &mkp MB4  &mkp MB5      &trans  &trans                                 &trans
             >;
         };
 
